@@ -18,7 +18,7 @@ This application is built with the following:
 ## Assumption
 
 ###### Tools
-Goal: create application with the mimimum functionality enougth for the task 9no additional things)
+Goal: create application with the mimimum functionality enougth for the task (no additional things)
 - No use additional framework/libs (except Apache Commons Lang for hashcode/equals building)
 - No use additional building tools (only javac and java)
 - No use EDI 
