@@ -26,10 +26,12 @@ This application is built with the following:
 - "Show" means print into standard console using System.out.print method, for "show" is used print method and interface (Printable).
 - A show contains an id, name, description each containers in the container list and list of assets.
 
-###Environement
+######Environement
 - Java is installed (8 version is minimum)
 - Classpath is set up to the lib directory as well like that 
-'export CLASSPATH=%CLASSPATH:<Path to lib directory>'
+```
+export CLASSPATH=%CLASSPATH:<Path to lib directory>
+```
 
 ## Next level of abstractions:
 
