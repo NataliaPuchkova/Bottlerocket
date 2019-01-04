@@ -29,3 +29,8 @@ This application is built with the following:
 ## Next level of abstractions:
 
 - The application may be created using Spring boot as REST API which will return data about containers as json format built with gradle with list of tests: unit tests + integration test with boundery checking, date working, particular Exception creation.
+
+## Building
+`javac -d bin -cp ".:lib/commons-lang3-3.8.1.jar:assets/*" Main.java`
+`cd bin`
+`java Main`
