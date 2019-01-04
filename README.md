@@ -26,6 +26,10 @@ This application is built with the following:
 - "Show" means print into standard console using System.out.print method, for "show" is used print method and interface (Printable).
 - A show contains an id, name, description each containers in the container list and list of assets.
 
+###Environement
+- Java is installed (8 version is minimum)
+- 'CLASSPATH=%CLASSPATH:<Path to lib directory>'
+
 ## Next level of abstractions:
 
 - The application may be created using Spring boot as REST API which will return data about containers as json format built with gradle with list of tests: unit tests + integration test with boundery checking, date working, particular Exception creation.
