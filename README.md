@@ -55,7 +55,7 @@ cd bin
 java Main
 ```
 ## Result
-Result is iptput into standard console.
+Result is output into standard console.
 ```
 Container id:1, name:Show 1, description:Wonderful show, Assets:
 Video: id=1, name=Movie 1, url=url1, expirationDate=01/01/2012, type=Clip
