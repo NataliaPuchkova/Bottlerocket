@@ -12,14 +12,13 @@ import assets.ContainerFactory;
 class Main{
 	public static void main(String...arg){
 		ContainerFactory containers = new ContainerFactory();
-		int containerId = 1;
-		containers.add(containerId, "This is container",  "Container1")
-				.add("Movie 1", "1", "clip", "url1", "2012.02.01", null)
-				.add("Movie 3", "2", "full", "url2", "2012.02.01", null)
-				.add("Image 1", "3",  null,  "url3", "2012.02.01", null)
-				.add("Image 2", "4",  null,  "url4", "2012.02.01", null)
-				.add("Ad 1",    "5",  "ad",  "url5", "2012.02.01", "description 1")
-				.add("Ad 2",    "6",  "ad",  "url6", "2012.02.01", "description 2");
+		containers.add(1, "Wonderful show",  "Show 1")
+                                .add("Video", "1", "Movie 1",  "url1", "01/01/2012", true)
+                                .add("Video", "2", "Movie 3",  "url2", "01/10/2012", false)
+                                .add("Image", "3", "Image 1",  "url3", "01/20/2012")
+                                .add("Image", "4", "Image 2",  "url4", "01/02/2012")
+                                .add("Ad",    "5", "Ad 1",     "url5", "03/09/2012", true, "description 1")
+                                .add("Ad",    "6", "Ad 2",     "url6", "06/05/08/2012", false,  "description 2") ;
 		containers.print();		 
 	}
 

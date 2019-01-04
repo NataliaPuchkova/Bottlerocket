@@ -1,10 +1,10 @@
 package assets;
 /**
-* Class Container allows create a container, print and add an asset (realized the minimum of requirements - no getters/setters, no additional classes like remove an asset
+* Class Container allows create a container, print and add an asset, realized the minimum of requirements - no getters/setters, no additional classes like remove an asset
 */
-import java.util.*;
+import java.util.ArrayList;
 
-public class Container implements Printable, Addable{
+public class Container implements Printable, Scalable{
 	private ArrayList<Asset> assets = new ArrayList<Asset>();
 	private int id;
 	private String name;
@@ -30,12 +30,36 @@ public class Container implements Printable, Addable{
 		System.out.println("-----------------------------");
 	}
 
-	public Container add(String name, String id, String type, String  url, String expirationDate, String productDescription){
-        	if (type==null) assets.add(new Image( name, id, url, expirationDate));
-		else if (type.equals("ad")) assets.add(new Ad(id, name,  url, expirationDate, productDescription));
-		else if (type.equals("full") || type.equals("clip")) assets.add(new Video(id, name, type, url, expirationDate));
-		return this;
-	}
+	public Container add(String typeIndicator, String id, String name, String  url, String expirationDate){
+                assets.add((new Image()).
+				setTypeIndicator(typeIndicator).
+				setId(id).
+				setName(name).
+				setUrl(url).
+				setExpirationDate(expirationDate));
+                return this;
+        }
 
-	
+ 	public Container add(String typeIndicator, String id, String name, String  url, String expirationDate, boolean isClip){
+		assets.add(((Video)  (new Video()).
+					setTypeIndicator(typeIndicator).
+					setId(id).setName(name).
+					setUrl(url).
+					setExpirationDate(expirationDate)).
+					setIsClip(isClip));
+                return this;
+        }
+
+	public Container add(String typeIndicator, String id, String name, String  url, String expirationDate, boolean isClip,  String description){
+                assets.add(((Ad) ((Video) (new Ad()).
+					setTypeIndicator(typeIndicator).
+					setId(id).
+					setName(name).
+					setUrl(url).
+					setExpirationDate(expirationDate)).
+					setIsClip(isClip)).
+					setProductDescription(description));
+                return this;
+        }
+
 }

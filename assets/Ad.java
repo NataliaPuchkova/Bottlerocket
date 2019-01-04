@@ -2,34 +2,28 @@ package assets;
 /**
 * Class of Ads 
 */
-class Ad extends Asset{
+class Ad extends Video{
+
 	private String productDescription;	
-
-	public Ad(String id, String name, String url, String expirationDate, String productDescription){
-		this.id = id;
-		this.name = name;
-		this.url = url;
-		this.expirationDate = expirationDate;
+	
+	protected Ad setProductDescription (String productDescription){
 		this.productDescription = productDescription;
+		return this;
 	}
 
-	public void setProductDescription (String productDescription){
-		this.productDescription = productDescription;
-	}
-
-	public String getProductDescription(){	
+	private String getProductDescription(){	
 		return this.productDescription;
 	}
 
 	@Override
 	public String toString(){
-                StringBuilder str = new StringBuilder("Ad: ");
-                str.append("id=").append(id).append(", ").
-                        append("url=").append(url).append(", ").
-                        append("name=").append(name).append(", ").
-                        append("productDescription=").append(productDescription).append(", ").
-                        append("expirationDate=").append(expirationDate);
-		return str.toString();
+                StringBuilder str = new StringBuilder(getTypeIndicator());
+		return str.append(": id=").append(getId()).append(", ").
+                        append("name=").append(getName()).append(", ").
+			append("url=").append(getUrl()).append(", ").
+                        append("expirationDate=").append(getExpirationDate()).append(", ").
+			append(getIsClip()).append(", ").
+			append("productDescription=").append(getProductDescription()).toString();
         }
 
 }

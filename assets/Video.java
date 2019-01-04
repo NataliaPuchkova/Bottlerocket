@@ -3,23 +3,29 @@ package assets;
 * Class of Videos, type of videos checked and setup in the factory class
 */
 class Video extends Asset{
-	public Video(String id, String name, String typeIndicator, String url, String expirationDate){
-		this.id = id;
-		this.name  = name;
-		this.typeIndicator = typeIndicator;
-		this.url = url;
-		this.expirationDate = expirationDate;
+
+	private boolean isClip = false;
+	private final String CLIP = "Clip";
+	private final String FULL_EPISODE = "Full episode";
+	
+	protected Video setIsClip(boolean isClip){
+		this.isClip = isClip;
+		return this;
+	}
+
+	protected String getIsClip(){
+		if (isClip) return CLIP; else return FULL_EPISODE;
 	}
 
 	@Override
-	 public String toString(){
-                StringBuilder str = new StringBuilder("Video: ");
-                str.append("id=").append(id).append(", ").
-                        append("url=").append(url).append(", ").
-                        append("name=").append(name).append(", ").
-			append("typeIndicator=").append(typeIndicator).append(", ").
-                        append("expirationDate=").append(expirationDate);
-		return str.toString();
+	public String toString(){
+                StringBuilder str = new StringBuilder(getTypeIndicator());
+                return  str.append(": id=").append(getId()).append(", ").
+                        append("name=").append(getName()).append(", ").
+			append("url=").append(getUrl()).append(", ").
+                        append("expirationDate=").append(getExpirationDate()).append(", type=").
+			append(getIsClip()).
+			toString();
         }
 
 
