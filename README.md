@@ -53,3 +53,15 @@ javac -d bin -cp ".:lib/commons-lang3-3.8.1.jar:assets/*" Main.java
 cd bin
 java Main
 ```
+## Result
+Result is iptput into standard console.
+```
+Container id:1, name:Show 1, description:Wonderful show, Assets:
+Video: id=1, name=Movie 1, url=url1, expirationDate=01/01/2012, type=Clip
+Video: id=2, name=Movie 3, url=url2, expirationDate=01/10/2012, type=Full episode
+Image: id=3, name=Image 1, url=url3, expirationDate=01/20/2012
+Image: id=4, name=Image 2, url=url4, expirationDate=01/02/2012
+Ad: id=5, name=Ad 1, url=url5, expirationDate=03/09/2012, Clip, productDescription=description 1
+Ad: id=6, name=Ad 2, url=url6, expirationDate=, Full episode, productDescription=description 2
+-----------------------------
+```
