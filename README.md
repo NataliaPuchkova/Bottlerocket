@@ -39,6 +39,7 @@ export CLASSPATH=%CLASSPATH:<Path to lib directory>
 
 ## Building
 ```
+cd <folder with the project>
 javac -d bin -cp ".:lib/commons-lang3-3.8.1.jar:assets/*" Main.java
 cd bin
 java Main
