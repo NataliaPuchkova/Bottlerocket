@@ -28,12 +28,12 @@ Goal: create application with the mimimum functionality enougth for the task (no
 
 - Asset is an abstraction class which describe an characteristics and beheivor of assets
 - Videos has two extra types (expiration date and indicator represents either movie, full episode or clip indicator).
-- Video ads has one extra type (product description).
+- Video ads has one extra type (product description), video ad is a video + extra field.
 - Containers contains list of videos, images and video ads.
 - Containers are created by ContainerFactory class, which has a list of containers
 - Main class shows an example of container creation (at least one container with each types of assets)
-- "Show" means print into standard console using System.out.print method, for "show" is used print method and interface (Printable).
-- A show contains an id, name, description each containers in the container list and list of assets.
+- Application prints into standard console using System.out.print metho (uses print method and interface Printable).
+- A show contains an id, name, description each containers in the container list and list of assets. Id is integer. 
 
 ###### Environement
 - Java is installed (8 version is minimum)
