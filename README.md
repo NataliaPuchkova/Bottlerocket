@@ -28,7 +28,8 @@ This application is built with the following:
 
 ###Environement
 - Java is installed (8 version is minimum)
-- 'CLASSPATH=%CLASSPATH:<Path to lib directory>'
+- Classpath is set up to the lib directory as well like that 
+'export CLASSPATH=%CLASSPATH:<Path to lib directory>'
 
 ## Next level of abstractions:
 
