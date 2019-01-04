@@ -17,6 +17,15 @@ This application is built with the following:
 
 ## Assumption
 
+###### Tools
+Goal: create application with the mimimum functionality enougth for the task 9no additional things)
+- No use additional framework/libs (except Apache Commons Lang for hashcode/equals building)
+- No use additional building tools (only javac and java)
+- No use EDI 
+- No create tests - no in the requirements 
+
+###### Requirement
+
 - Asset is an abstraction class which describe an characteristics and beheivor of assets
 - Videos has two extra types (expiration date and indicator represents either movie, full episode or clip indicator).
 - Video ads has one extra type (product description).
@@ -32,10 +41,9 @@ This application is built with the following:
 ```
 export CLASSPATH=%CLASSPATH:<Path to lib directory>
 ```
-
 ## Next level of abstractions:
 
-- The application may be created using Spring boot as REST API which will return data about containers as json format built with gradle with list of tests: unit tests + integration test with boundery checking, date working, particular Exception creation.
+- The application may be created using Spring boot as REST API which will return data about containers as json format built with gradle with list of tests: unit tests + integration test with boundery checking, date working, particular Exception creation. - Will create if you need it.
 
 ## Building
 ```
