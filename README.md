@@ -1,4 +1,4 @@
-# Bottlerocket
+# Java Application example
 
 ## Requirements
 - You have information on videos for a show, a list of images associated with a show, and a list of video ads associated with a show all considered "assets".
